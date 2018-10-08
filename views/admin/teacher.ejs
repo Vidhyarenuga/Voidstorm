@@ -1,0 +1,39 @@
+<% layout('boilerplate4') %>
+
+<div class="container">
+<script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5adbd5584b309d9bbd037153"}(window,document);</script>
+
+  <div class="row">
+    <div class="jumbotron" style='min-height: 75px;background-color:transparent !important;text-shadow: black 0.3em 0.3em 0.3em;color: white;background:transparent;'>
+  <div class="container">
+    <p class="text-center">
+      <h2 class="text-center">Teacher</h2>
+    </p>
+  </div>
+</div>
+
+    
+    <hr />
+
+    <% for (var i = 0; i < users.length; i++) { %>
+    <div class="col-md-4">
+
+      <a href="/users/<%= users[i]._id %>"
+        style="text-decoration: none; color: #34495e">
+        <div class="panel panel-default">
+
+          <div class="panel-body" style="border:0px;height:250px;overflow-y:auto">
+            <h4><%= users[i].email %></h4>
+            
+             <p style="text-align:justify"><%= users[i].profile.name%></p>
+             
+          </div>
+
+      </div>
+      </a>
+    </div>
+    <% } %>
+
+  </div>
+
+</div>

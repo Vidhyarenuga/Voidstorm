@@ -1,0 +1,42 @@
+<% layout('boilerplate2') %>
+
+<div class="container">
+<div class="row">
+  <div class="col-lg-6 col-md-offset-3 ecx">
+
+    <h1>Create Course</h1>
+    <form role="form" method="post">
+      <div class="form-group">
+        <label for="name">Title:</label>
+        <input type="text" class="form-control" name="title" placeholder="<%= course.title %>">
+      </div>
+      <div class="form-group">
+          <label for="name">Category:</label>
+      <select name="category"  class="form-control">
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+        <option value="draft">Draft</option>
+    </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Price:</label>
+        <input type="text" class="form-control" name="price" placeholder="<%= course.price %>">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Description:</label>
+        <input type="text" class="form-control" name="desc" placeholder="<%= course.desc %>">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Wistia ID:</label>
+        <input type="text" class="form-control" name="wistiaId" placeholder="<%= course.wistiaId %>">
+      </div>
+
+      <button type="submit"style="float: right;margin-top:2%;border-radius:50%;outline:none;padding-top:2%;padding-bottom:2%;"class="btn btn-success"><i class="fa fa-fw fa-check"aria-hidden="true"></i></button>
+
+    </form>
+</div>
+</div>
+</div>

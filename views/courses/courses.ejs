@@ -1,0 +1,71 @@
+<% layout('boilerplate') %>
+
+<div class="container">
+<script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5adbd5584b309d9bbd037153"}(window,document);</script>
+
+  <div class="row">
+    <div class="jumbotron" style='min-height: 75px;background-color:transparent !important;text-shadow: black 0.3em 0.3em 0.3em;color: white;background:transparent;'>
+  <div class="container">
+    <p class="">
+      <h2 class="">All Courses</h2>
+    </p>
+  </div>
+</div>
+<div class="header-container" style="margin-top: -12%;">
+<form action="">
+    <input type="text" name="keyword" id="" placeholder="Keyword, course title"autocomplete="off">
+    <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+            viewBox="0 0 483.083 483.083" xml:space="preserve">
+            <g>
+                <g>
+                    <path d="M332.74,315.35c30.883-33.433,50.15-78.2,50.15-127.5C382.89,84.433,298.74,0,195.04,0S7.19,84.433,7.19,187.85    S91.34,375.7,195.04,375.7c42.217,0,81.033-13.883,112.483-37.4l139.683,139.683c3.4,3.4,7.65,5.1,11.9,5.1s8.783-1.7,11.9-5.1    c6.517-6.517,6.517-17.283,0-24.083L332.74,315.35z M41.19,187.85C41.19,103.133,110.04,34,195.04,34    c84.717,0,153.85,68.85,153.85,153.85S280.04,341.7,195.04,341.7S41.19,272.567,41.19,187.85z"
+                    />
+                </g>
+            </g>
+        </svg>
+    </button>
+</form>
+</div>    
+    <hr />
+
+    <% for (var i = 0; i < courses.length; i++) { %>
+
+ 
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <article class="material-card Light-Blue">
+          <h2>
+              <span><%= courses[i].title %></span>
+              <strong>
+                  <i class="fa fa-fw fa-user"></i>
+                  <%= user.profile.name %>
+              </strong>
+          </h2>
+          <div class="mc-content">
+              <div class="img-container">
+                  <img class="img-responsive" src="/images/mern.jpg">
+                  <embed src="<%= courses[i].syllabus %>" class = "img-thumbnail">
+              </div>
+              <div class="mc-description">
+                <%= courses[i].desc %></div>
+          </div>
+          <a class="mc-btn-action">
+              <i class="fa fa-bars"></i>
+          </a>
+          <div class="mc-footer">
+              <h4>
+                  Social
+              </h4>
+              <a class="fa fa-fw fa-heart heartx"></a>
+
+              <a href="/courses/<%= courses[i]._id %>" class="fa fa-fw fa-arrow-right movx" style="    margin-left: 62%;"></a>
+              
+          </div>
+      </article>
+  </div>
+    <% } %>
+
+  </div>
+
+</div>

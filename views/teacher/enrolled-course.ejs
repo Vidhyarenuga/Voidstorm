@@ -1,0 +1,38 @@
+<% layout('boilerplate') %>
+
+
+
+<div class="container">
+
+  <div class="row">
+
+    <h2 class="text-center" >My Courses</h2>
+    <hr />
+
+    <% for (var i = 0; i < foundUser.coursesTaken.length; i++) { %>
+    <div class="col-md-4 courseed">
+
+      <a href="/courses/<%= foundUser.coursesTaken[i].course._id %>"
+        >
+
+        <div class="panel panel-default">
+
+
+          <div class="panel-body csrx" >
+            <h4 ><%= foundUser.coursesTaken[i].course.title %></h4>
+            <p style="text-align:justify"><i class="fa fa-fw fa-user"></i><%= foundUser.coursesTaken[i].course.desc %></p>
+        
+            <a href="/edit-course/<%= foundUser.coursesTaken[i].course._id %>" class="btn btn-warning" style="margin-top: 4%;padding-top:3%;margin-left:43%;border-radius:50%;padding-bottom: 3%;">
+            <i class="fa fa-fw fa-pencil"aria-hidden="true"></i>
+            </a>
+          </div>
+
+      </div>
+      
+      </a>
+    </div>
+    <% } %>
+
+  </div>
+
+</div>

@@ -1,0 +1,62 @@
+<% layout('boilerplate2') %>
+
+<div class="container">
+<div class="row">
+  <div class="col-lg-6 col-md-offset-3 ecx">
+
+    <h1>Create Course</h1>
+    <form method="post"  enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Title:</label>
+        <input type="text" class="form-control" name="title" required>
+      </div>
+      <div class="form-group">
+          <label for="name">Category:</label>
+      <select name="category"  class="form-control">
+        <option value="development">Development</option>
+        <option value="it">IT&Software</option>
+        <option value="photography">Photography</option>
+        <option value="business">Business</option>
+        <option value="design">Design</option>
+        <option value="lifestyle">Lifestyle</option>
+    </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Description:</label>
+        <input type="text" class="form-control" name="desc" required>
+      </div>
+     
+      <div class="form-group">
+        <label for="name">Language:</label>
+    <select name="language"  class="form-control">
+      <option value="tamil">Tamil</option>
+      <option value="english">English</option>
+      <option value="other">Other</option>
+      
+  </select>
+    </div>
+    <div class="form-group">
+      <label for="name">Wistia ID:</label>
+      <input type="text" class="form-control" name="wistiaId" required>
+    </div>
+      <div class="form-group">
+        <label for="name">Price:</label>
+        <input type="text" class="form-control" name="price" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="name">Syllabus:</label>
+        <input type="file" class="form-control-file" name="syllabus" required>
+      </div>
+
+     
+
+     
+
+      <button type="submit"style="float: right;margin-top:2%;border-radius:50%;outline:none;padding-top:2%;padding-bottom:2%;"class="btn btn-success"><i class="fa fa-fw fa-check"aria-hidden="true"></i></button>
+
+
+    </form>
+</div>
+</div>
+</div>
